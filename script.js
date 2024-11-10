@@ -12,39 +12,78 @@
 //     console.log(calculation(a,b,c,d));
 
 // })()
-// -------------------------------------------------------------------------------
+// *2-------------------------------------------------------------------------------
 
-// const a = ( ) => {
-
-//     let array=[] ;
-//     for (let i = 0; i>=500; i++) {
-
-//         array[i] = i
-
-//     }
-//     return array;
+// let numbs  = []
+// for (let i = 1; i <= 500; i++) {
+//     numbs.push(i*2);
 // }
-// a1 = a()
-// console.log(a1);
-// # Multiplier 2 from 1 to 1000
-let nums  = []
-for (let i = 1; i <= 500; i++) {
-    nums.push(i*2);
+// console.log(numbs);
+
+// *3--------------------------------------------------
+
+// let num  = []
+// for (let i = 9; i <= 900; i+=9) {
+//     num.push(i);
+// }
+// console.log(num);
+
+// !--------------------------------------------------------------------------------------------------
+
+
+
+
+// const sendArguments = (mode, n) => {
+//     switch (mode) {
+//         case 'S':
+//             return s(n)
+//             break;
+//         case 'P':
+//             return p(n)
+//             break;
+//         case 'Sin':
+//             return sin(n)
+//             break;
+//         case 'T':
+//             return t(n)
+//             break;
+//         default:
+//             return 'enter the mode'
+//     }
+// }
+
+
+
+// (function render(mode, n) {
+//     sendArguments(mode, n);
+
+// })
+// --------------------------------------
+let n = 0;
+
+
+
+const sliceDigit = num => {
+    let d = []
+    for (let i = 0; i < num.length; i++) {
+        d.push(Number(num[i]));
+    }
+    return d;
 }
-console.log(nums);
+
+const sumOfDigits = (digits) => {
+    return digits.reduce((ass, crr) => ass + crr)
+}
+const condition = (num, red) => num % red === 0 ? 'yes' : 'no';
 
 
+(function render() {
 
-// function factorialize(num) {
-//     var result = num;
-//     if (num === 0 || num === 1)
-//         return 1;
-//     while (num > 1) {
-//         num--;
-//         result *= num;
-//     }
-//     return result;
-// }
-// // console.log(factorialize(5));
+    console.log(condition
+        (n, sumOfDigits
+            (sliceDigit
+                (n.toString()))));
+    ;
 
-// f
+
+})()
